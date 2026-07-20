@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>H.E.E. Employee Card Simulator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+
+<h1>H.E.E. EMPLOYEE CARD SIMULATOR</h1>
+
+<p>
+Collect employee cards.
+Battle your collection.
+Unlock every file.
+</p>
+
+</header>
+
+<hr>
+
+<!-- ========================= -->
+<!-- PACK OPENING -->
+<!-- ========================= -->
+
+<section id="packs">
+
+<h2>Card Packs</h2>
+
+<button id="playGame">
+Play Security Check
+</button>
+
+<button id="openPack" disabled>
+Open Pack
+</button>
+
+<p id="packStatus">
+Complete the Security Check to earn one pack.
+</p>
+
+<div id="miniGame" style="display:none;">
+
+<h3>Security Check</h3>
+
+<p>
+Click every smiling employee before time runs out.
+</p>
+
+<div id="gameArea">
+
+<button class="smileTarget" id="target1">🙂</button>
+<button class="smileTarget" id="target2">🙂</button>
+<button class="smileTarget" id="target3">🙂</button>
+
+</div>
+
+<p id="gameText"></p>
+
+</div>
+
+<h2>Newest Pack</h2>
+
+<div id="packCards"></div>
+
+</section>
+
+<hr>
+
+<!-- ========================= -->
+<!-- COLLECTION -->
+<!-- ========================= -->
+
+<section>
+
+<h2>Collection</h2>
+
+<div id="collection">
+
+No cards unlocked.
+
+</div>
+
+</section>
+
+<hr>
+
+<!-- ========================= -->
+<!-- BATTLE -->
+<!-- ========================= -->
+
+<section>
+
+<h2>Battle Simulator</h2>
+
+<div class="battleArea">
+
+<div>
+
+<h3>Employee A</h3>
+
+<select id="fighter1">
+
+<option value="">Choose Card</option>
+
+</select>
+
+<div id="stats1">
+
+No card selected.
+
+</div>
+
+</div>
+
+<div id="vs">
+
+VS
+
+</div>
+
+<div>
+
+<h3>Employee B</h3>
+
+<select id="fighter2">
+
+<option value="">Choose Card</option>
+
+</select>
+
+<div id="stats2">
+
+No card selected.
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+<button id="fightButton">
+
+Run Simulation
+
+</button>
+
+<br><br>
+
+<div id="result">
+
+Awaiting simulation...
+
+</div>
+
+</section>
+
+<script src="cards.js"></script>
+<script src="collection.js"></script>
+<script src="battle.js"></script>
+<script src="minigame.js"></script>
+
+</body>
+</html>
