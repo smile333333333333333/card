@@ -17,9 +17,7 @@
 <h1>H.E.E. EMPLOYEE CARD SIMULATOR</h1>
 
 <p>
-Collect employee cards.
-Battle your collection.
-Unlock every file.
+Collect employee cards, build your collection, and battle your strongest discoveries.
 </p>
 
 </header>
@@ -80,7 +78,7 @@ Click every smiling employee before time runs out.
 
 <section>
 
-<h2>Collection</h2>
+<h2>Your Collection</h2>
 
 <div id="collection">
 
@@ -104,7 +102,7 @@ No cards unlocked.
 
 <div>
 
-<h3>Employee A</h3>
+<h3>Fighter 1</h3>
 
 <select id="fighter1">
 
@@ -112,7 +110,7 @@ No cards unlocked.
 
 </select>
 
-<div id="stats1">
+<div id="stats1" class="stats">
 
 No card selected.
 
@@ -128,7 +126,7 @@ VS
 
 <div>
 
-<h3>Employee B</h3>
+<h3>Fighter 2</h3>
 
 <select id="fighter2">
 
@@ -136,7 +134,7 @@ VS
 
 </select>
 
-<div id="stats2">
+<div id="stats2" class="stats">
 
 No card selected.
 
@@ -164,7 +162,17 @@ Awaiting simulation...
 
 </section>
 
-<script src="cards.js"></script>
+<!-- ========================= -->
+<!-- SCRIPTS -->
+<!-- ========================= -->
+
+<script src="common.js"></script>
+<script src="uncommon.js"></script>
+<script src="rare.js"></script>
+<script src="epic.js"></script>
+<script src="legendary.js"></script>
+<script src="impossible.js"></script>
+
 <script src="collection.js"></script>
 <script src="battle.js"></script>
 <script src="minigame.js"></script>
