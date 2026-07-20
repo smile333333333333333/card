@@ -1,0 +1,226 @@
+/* ===========================
+   H.E.E. Card Simulator
+=========================== */
+
+body{
+
+    margin:0;
+    padding:20px;
+
+    background:#111;
+    color:#eee;
+
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1,h2,h3{
+
+    text-align:center;
+    color:#ffffff;
+
+}
+
+p{
+
+    text-align:center;
+
+}
+
+hr{
+
+    border:1px solid #444;
+    margin:30px 0;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+button{
+
+    background:#2b2b2b;
+    color:white;
+
+    border:2px solid #666;
+
+    padding:12px 24px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    border-radius:8px;
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    background:#3d3d3d;
+
+}
+
+button:disabled{
+
+    opacity:.4;
+    cursor:not-allowed;
+
+}
+
+/* ===========================
+   Pack Section
+=========================== */
+
+#packs{
+
+    text-align:center;
+
+}
+
+#packCards{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+/* ===========================
+   Cards
+=========================== */
+
+.card{
+
+    width:190px;
+
+    background:#222;
+
+    border:2px solid #555;
+
+    border-radius:10px;
+
+    padding:10px;
+
+    text-align:center;
+
+}
+
+.card h3{
+
+    margin-top:0;
+
+}
+
+/* ===========================
+   Collection
+=========================== */
+
+#collection{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+/* ===========================
+   Battle
+=========================== */
+
+.battleArea{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+}
+
+#vs{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    margin-top:60px;
+
+}
+
+.stats{
+
+    background:#222;
+
+    border:2px solid #555;
+
+    padding:10px;
+
+    margin-top:10px;
+
+    width:220px;
+
+    min-height:150px;
+
+}
+
+/* ===========================
+   Minigame
+=========================== */
+
+#miniGame{
+
+    margin-top:20px;
+
+    text-align:center;
+
+}
+
+#gameArea{
+
+    margin:20px;
+
+}
+
+.smileTarget{
+
+    font-size:40px;
+
+    margin:15px;
+
+    width:80px;
+
+    height:80px;
+
+}
+
+/* ===========================
+   Result
+=========================== */
+
+#result{
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    margin-top:20px;
+
+}
