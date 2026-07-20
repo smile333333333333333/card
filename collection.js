@@ -1,55 +1,47 @@
-// =====================================
+// ======================================
 // H.E.E. COLLECTION SYSTEM
-// =====================================
+// ======================================
 
-// Combine every rarity into one list
+// Merge every rarity into one big card list
 
 const cards = [
-
     ...commonCards,
     ...uncommonCards,
     ...rareCards,
     ...epicCards,
     ...legendaryCards,
     ...impossibleCards
-
 ];
 
-// ----------------------------
+// ======================================
 
-const packButton = document.getElementById("openPack");
 const packArea = document.getElementById("packCards");
 const collectionArea = document.getElementById("collection");
-const packStatus = document.getElementById("packStatus");
+const openButton = document.getElementById("openPack");
 
-// ----------------------------
+// ======================================
 
-let unlocked = [];
+let unlocked = ["Factory Worker"];
 
-// Everyone starts with Factory Worker
+// ======================================
 
-unlockCard("Factory Worker");
-
-// =====================================
+function hasCard(name){
+    return unlocked.includes(name);
+}
 
 function unlockCard(name){
 
-    if(!unlocked.includes(name))
+    if(!hasCard(name)){
         unlocked.push(name);
+        return true;
+    }
 
+    return false;
 }
 
-// =====================================
-
-function hasCard(name){
-
-    return unlocked.includes(name);
-
-}
-
-// =====================================
-// Pick rarity first
-// =====================================
+// ======================================
+// Rarity Chances
+// ======================================
 
 function randomCard(){
 
@@ -84,14 +76,14 @@ function randomCard(){
     }
 
     return pool[
-        Math.floor(Math.random()*pool.length)
+        Math.floor(
+            Math.random()*pool.length
+        )
     ];
 
 }
 
-// =====================================
-// Collection
-// =====================================
+// ======================================
 
 function refreshCollection(){
 
@@ -129,7 +121,7 @@ function refreshCollection(){
 
             <hr>
 
-            Unknown
+            Locked
 
             `;
 
@@ -141,9 +133,37 @@ function refreshCollection(){
 
 }
 
-// =====================================
-// Pack Opening
-// =====================================
+// ======================================
+
+function refreshDropdowns(){
+
+    fighter1.innerHTML =
+    '<option value="">Choose Card</option>';
+
+    fighter2.innerHTML =
+    '<option value="">Choose Card</option>';
+
+    cards.forEach(card=>{
+
+        if(hasCard(card.name)){
+
+            fighter1.innerHTML +=
+            `<option value="${card.name}">
+            ${card.name}
+            </option>`;
+
+            fighter2.innerHTML +=
+            `<option value="${card.name}">
+            ${card.name}
+            </option>`;
+
+        }
+
+    });
+
+}
+
+// ======================================
 
 function openPack(){
 
@@ -153,9 +173,7 @@ function openPack(){
 
         const card=randomCard();
 
-        const already=hasCard(card.name);
-
-        unlockCard(card.name);
+        const isNew=unlockCard(card.name);
 
         const div=document.createElement("div");
 
@@ -181,9 +199,9 @@ function openPack(){
 
         <hr>
 
-        <b style="color:${already?"gold":"lime"}">
+        <b style="color:${isNew ? "lime" : "gold"}">
 
-        ${already?"Duplicate":"NEW CARD!"}
+        ${isNew ? "NEW CARD!" : "Duplicate"}
 
         </b>
 
@@ -199,6 +217,6 @@ function openPack(){
 
 }
 
-// =====================================
+// ======================================
 
 refreshCollection();
